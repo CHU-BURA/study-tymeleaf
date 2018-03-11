@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Study Thymeleaf</title>
+</head>
+<body>
+
+  <h1 th:text="${title}"></h1>
+  <h3 th:text="${subTitleA}"></h3>
+  <div>[[${contentsA}]]</div>
+  <div th:object="${user}">
+    <div th:text="*{msg}"></div>
+    <li>名前：[[*{name}]]</li>
+    <li>年齢：[[*{age}]]</li>
+  </div>
+
+</body>
+</html>
